@@ -64,6 +64,5 @@ A list of all clauses used in the Knowledge Base.
 The final query result: SAFE, UNSAFE, or RISKY.
 
 Authors
-Jada Zorn 
-
+Jada Zorn,
 Sara Croghan
