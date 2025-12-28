@@ -15,7 +15,48 @@ The solver is built on a custom FOL engine that processes disjunctive rules and 
 ## Cave File Format
 
 The program processes text files representing cave environments. These files must follow a specific structure for the parser to load facts correctly:
+GRID: Defines the square dimensions of the cave.
 
+
+ARROWS: The number of arrows available to the agent.
+
+
+PATH: A list of coordinates visited and the sensory data (True/False) detected at each step.
+
+
+
+QUERY: The target (x, y) coordinate to be evaluated.
+
+
+
+RESOLUTION: The expected ground-truth answer used for verification.
+
+How to Run
+Clone the Repository:
+
+Bash
+
+git clone [https://github.com/your-username/wumpus-fol-solver.git](https://github.com/your-username/wumpus-fol-solver.git)
+cd wumpus-fol-solver
+Configure the Path: Open the main Python script and update the file_path variable to point to your desired cave file.
+
+Python
+
+puzzle_level = 'hard'
+file_path = f'/path/to/your/Caves/{puzzle_level}/path_h4.txt'
+Execute the Solver: Run the script to process the cave file and execute the resolution queries. The solver will load general Wumpus World rules, parse the cave facts, and attempt to resolve the safety of the query coordinate.
+
+
+View Results: The solver generates an output file named group_11_path_{ID}.txt. This file includes:
+
+A list of all clauses used in the Knowledge Base.
+
+The final query result: SAFE, UNSAFE, or RISKY.
+
+Authors
+Jada Zorn 
+
+Sara Croghan
 ```text
 GRID: 4x4
 ARROWS: 1
