@@ -15,6 +15,16 @@ The solver is built on a custom FOL engine that processes disjunctive rules and 
 ## Cave File Format
 
 The program processes text files representing cave environments. These files must follow a specific structure for the parser to load facts correctly:
+
+GRID: 4x4
+ARROWS: 1
+PATH:
+(0,0) Breeze:F Stench:F
+(0,1) Breeze:T Stench:F
+QUERY: (1,1)
+RESOLUTION: SAFE
+
+
 GRID: Defines the square dimensions of the cave.
 
 
@@ -57,11 +67,3 @@ Authors
 Jada Zorn 
 
 Sara Croghan
-```text
-GRID: 4x4
-ARROWS: 1
-PATH:
-(0,0) Breeze:F Stench:F
-(0,1) Breeze:T Stench:F
-QUERY: (1,1)
-RESOLUTION: SAFE
